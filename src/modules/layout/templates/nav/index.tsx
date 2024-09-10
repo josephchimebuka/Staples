@@ -7,7 +7,7 @@ import SideMenu from "@modules/layout/components/side-menu"
 
 export default async function Nav() {
   const regions = await listRegions().then((regions) => regions)
-
+ 
   return (
     <div className="sticky top-0 inset-x-0 z-50 group">
       <header className="relative h-16 mx-auto border-b duration-200 bg-white border-ui-border-base">
@@ -24,7 +24,7 @@ export default async function Nav() {
               className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
               data-testid="nav-store-link"
             >
-              Medusa Store
+              Staples Store
             </LocalizedClientLink>
           </div>
 
