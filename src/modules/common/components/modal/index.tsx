@@ -112,7 +112,7 @@ const Footer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
 Modal.Title = Title
 Modal.Description = Description
-Modal.Body = Body
+Modal.Body = Body 
 Modal.Footer = Footer
 
 export default Modal

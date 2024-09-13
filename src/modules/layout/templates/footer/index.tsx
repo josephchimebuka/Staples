@@ -1,10 +1,11 @@
 import { Text, clx } from "@medusajs/ui"
+import Image from "next/image"
 
 import { getCategoriesList, getCollectionsList } from "@lib/data"
 
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import MedusaCTA from "@modules/layout/components/medusa-cta"
-
+import logo from '../../../../../public/Staples3.svg'
 export default async function Footer() {
   const { collections } = await getCollectionsList(0, 6)
   const { product_categories } = await getCategoriesList(0, 6)
@@ -18,7 +19,7 @@ export default async function Footer() {
               href="/"
               className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
             >
-              Medusa Store
+            <Image src={logo} alt={""} width={100} height={50}/>
             </LocalizedClientLink>
           </div>
           <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
@@ -104,7 +105,7 @@ export default async function Footer() {
               </div>
             )}
             <div className="flex flex-col gap-y-2">
-              <span className="txt-small-plus txt-ui-fg-base">Medusa</span>
+              <span className="txt-small-plus txt-ui-fg-base">Staples</span>
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
                 <li>
                   <a
